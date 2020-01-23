@@ -6,7 +6,36 @@ using System.Threading.Tasks;
 
 namespace Algorithm.utils
 {
-	class Comparator
+	public sealed class Comparator
 	{
+		private static readonly Comparator instance = new Comparator();
+
+		static Comparator() { }
+		private Comparator() { }
+		public static Comparator Instance {
+			get {
+				return instance;
+			}
+		}
+
+		static int DefaultFunction(int a, int b) {
+			if (a == b) {
+				return 0;
+			}
+
+			return a < b ? -1 : 1;
+		}
+
+		public bool operatorEqual(int a, int b) {
+			return Comparator.DefaultFunction(a, b) == 0;
+		}
+
+		public bool LessThan(int a, int b) {
+			return Comparator.DefaultFunction(a, b) < 0;
+		}
+
+		public bool GreaterThan(int a, int b) {
+			return Comparator.DefaultFunction(a, b) > 0;
+		}
 	}
 }
