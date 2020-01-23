@@ -37,5 +37,16 @@ namespace Algorithm.utils
 		public bool GreaterThan(int a, int b) {
 			return Comparator.DefaultFunction(a, b) > 0;
 		}
+
+		public bool LessThanOrEqual(int a, int b) {
+			return this.LessThan(a, b) || this.operatorEqual(a, b);
+		}
+
+		public bool GreaterThanOrEqual(int a, int b)
+		{
+			return this.GreaterThan(a, b) || this.operatorEqual(a, b);
+		}
+
+		publlic Reverse() { }
 	}
 }
