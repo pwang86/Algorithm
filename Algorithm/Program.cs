@@ -10,6 +10,10 @@ namespace Algorithm
 	{
 		static void Main(string[] args)
 		{
+			/*LinearSearch*/
+			Console.WriteLine("Please enter an int array, separated by ,: ");
+			string input = Console.ReadLine();
+			string[] intArray = input.Split(',');
 		}
 	}
 }
