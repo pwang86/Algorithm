@@ -47,6 +47,6 @@ namespace Algorithm.utils
 			return this.GreaterThan(a, b) || this.operatorEqual(a, b);
 		}
 
-		publlic Reverse() { }
+		//publlic Reverse() { }
 	}
 }
