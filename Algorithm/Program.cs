@@ -22,7 +22,10 @@ namespace Algorithm
 			//{
 			//	Console.WriteLine("{0}",item);
 			//}
-			Reverse(123);
+			// Reverse(123);
+
+			Console.WriteLine(IsPalindrome(121));
+
 		}
 
 		public static int[] TwoSum(int[] nums, int target)
@@ -80,6 +83,31 @@ namespace Algorithm
 
 			}
 			return reverse;
+		}
+		public static bool IsPalindrome(int x)
+		{
+			/*0 is anaylized ahead of x % 10 ==0, because 0 % 10 == 0*/
+			if (x == 0)
+			{
+				return true;
+			}
+			if (x < 0 || x % 10 == 0) { return false; }
+			int origin = x;
+			int reverse = 0;
+			while (x != 0)
+			{
+				int remainder = x % 10;
+				x = x / 10;
+				reverse = reverse * 10 + remainder;
+			}
+			if (reverse == origin)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 
 	}
