@@ -71,6 +71,7 @@ namespace Algorithm
 				int remainder = x % 10;
 				x /= 10;
 				Console.WriteLine(x);
+				/*7 and -8 because int range is from -2,147,483,648 to 2,147,483,647*/
 				if (reverse > Int32.MaxValue / 10 || (reverse == Int32.MaxValue / 10 && remainder > 7))
 				{ return 0; }
 				if (reverse < Int32.MinValue / 10 || (reverse == Int32.MinValue / 10 && remainder < -8))
