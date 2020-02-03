@@ -24,7 +24,8 @@ namespace Algorithm
 			//}
 			// Reverse(123);
 
-			Console.WriteLine(IsPalindrome(121));
+			//Console.WriteLine(IsPalindrome(121));
+			Console.WriteLine(RomanToInt("LVI"));
 
 		}
 
@@ -108,6 +109,61 @@ namespace Algorithm
 			{
 				return false;
 			}
+		}
+
+		public static int RomanToInt(string s)
+		{
+			char[] charArr = s.ToUpper().ToCharArray();
+			int result = 0;
+			int j = charArr.Length;
+			for (int i = 0; i < j; i++)
+			{
+				int num=0;
+				if ((i!=(j-1)) && charArr[i].Equals('I') && (charArr[i+1].Equals('V') || charArr[i + 1].Equals('X')))
+				{
+					num = -1;
+				}
+				else if ((i != (j - 1)) && charArr[i].Equals('X') && (charArr[i + 1].Equals('L') || charArr[i + 1].Equals('C')))
+				{
+					num = -10;
+				}
+				else if ((i != (j - 1)) && charArr[i].Equals('C') && (charArr[i + 1].Equals('D') || charArr[i + 1].Equals('M')))
+				{
+					num = -100;
+				}
+				else
+				{
+					switch (charArr[i])
+					{
+						case 'I':
+							num = 1;
+							break;
+						case 'V':
+							num = 5;
+							break;
+						case 'X':
+							num = 10;
+							break;
+						case 'L':
+							num = 50;
+							break;
+						case 'C':
+							num = 100;
+							break;
+						case 'D':
+							num = 500;
+							break;
+						case 'M':
+							num = 1000;
+							break;
+						default:
+							num = 0;
+							break;
+						}
+					}
+				result += num;
+			}
+			return result;
 		}
 
 	}
