@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Algorithm
@@ -25,7 +26,11 @@ namespace Algorithm
 			// Reverse(123);
 
 			//Console.WriteLine(IsPalindrome(121));
-			Console.WriteLine(RomanToInt("LVI"));
+
+			//Console.WriteLine(RomanToInt("LVI"));
+
+			string[] stringArr = new string[] { "flower", "flow", "flight" };
+			Console.WriteLine(LongestCommonPrefix(stringArr));
 
 		}
 
@@ -164,6 +169,28 @@ namespace Algorithm
 				result += num;
 			}
 			return result;
+		}
+		public static string LongestCommonPrefix(string[] strs)
+		{
+			StringBuilder prefix = new StringBuilder();
+			StringBuilder result = new StringBuilder();
+			foreach (char c in strs[0])
+			{
+				int count = 0;
+				prefix.Append(c);
+				for (int i = 1; i < strs.Length; i++)
+				{
+					if ((Regex.Match(strs[i], prefix.ToString(), RegexOptions.IgnoreCase)).Success)
+						count++;
+					else
+						break;
+				}
+				if (count == (strs.Length - 1))
+					result.Append(c);
+				else
+					break;
+			}
+			return result.ToString();
 		}
 
 	}
