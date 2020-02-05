@@ -193,5 +193,17 @@ namespace Algorithm
 			return result.ToString();
 		}
 
+		public static bool IsValid(string s)
+		{
+			if (s.Equals(""))
+				return true;
+			else if ((s[0].Equals(")")) || (s[0].Equals("}")) || (s[0].Equals("]")))
+				return false;
+			else
+				s.Length / 2
+
+
+	}
+
 	}
 }
