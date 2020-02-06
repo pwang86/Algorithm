@@ -195,15 +195,31 @@ namespace Algorithm
 
 		public static bool IsValid(string s)
 		{
-			if (s.Equals(""))
-				return true;
-			else if ((s[0].Equals(")")) || (s[0].Equals("}")) || (s[0].Equals("]")))
-				return false;
-			else
-				s.Length / 2
+			Hashtable mappings = new Hashtable();
+			mappings.Add(')', '(');
+			mappings.Add('}', '{');
+			mappings.Add(']', '[');
 
+			Stack<char> myStack = new Stack<char>();
+			for (int i = 0; i < s.Length; i++)
+			{
+				char c = s[i];
+				if (mappings.ContainsKey(c))
+				{
+					char topElement = ((myStack.Count == 0) ? '#' : myStack.Pop());
+					if (!topElement.Equals(mappings[c]))
+					{
+						return false;
+					}
+				}
+				else
+				{
+					myStack.Push(c);
+				}
+			}
+			return (myStack.Count == 0);
 
-	}
+		}
 
 	}
 }
