@@ -29,8 +29,11 @@ namespace Algorithm
 
 			//Console.WriteLine(RomanToInt("LVI"));
 
-			string[] stringArr = new string[] { "flower", "flow", "flight" };
-			Console.WriteLine(LongestCommonPrefix(stringArr));
+			//string[] stringArr = new string[] { "flower", "flow", "flight" };
+			//Console.WriteLine(LongestCommonPrefix(stringArr));
+
+			int[] array = new int[] { 1, 1, 2 };
+			Console.WriteLine(RemoveDuplicates(array));
 
 		}
 
@@ -223,11 +226,11 @@ namespace Algorithm
 
 		// public class ListNode
 		//{
-  //        public int val;
-  //        public ListNode next;
-  //        public ListNode(int x) { val = x; }
-  //      }
- 
+		//        public int val;
+		//        public ListNode next;
+		//        public ListNode(int x) { val = x; }
+		//      }
+
 
 		//public ListNode MergeTwoLists(ListNode l1, ListNode l2)
 		//{
@@ -261,6 +264,29 @@ namespace Algorithm
 
 		//	return head.next;
 		//}
+
+		public static int RemoveDuplicates(int[] nums)
+		{
+			if (nums.Length == 0)
+				return 0;
+			int count = 0;
+			int? temp = 0;
+			for (int i = 0; i < nums.Length; i++)
+			{
+				temp = nums.FirstOrDefault(x => x > nums[i]);
+				if (temp != null)
+				{
+					int index = Array.IndexOf(nums, temp);
+					nums[index] = nums[i + 1];
+					nums[i + 1] = (int)temp;
+					count++;
+				}
+				else
+					break;
+
+			}
+			return (count + 1);
+		}
 
 	}
 }
