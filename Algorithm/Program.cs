@@ -270,16 +270,19 @@ namespace Algorithm
 			if (nums.Length == 0)
 				return 0;
 			int count = 0;
-			int? temp = 0;
+			int temp = 0;
 			for (int i = 0; i < nums.Length; i++)
 			{
 				temp = nums.FirstOrDefault(x => x > nums[i]);
-				if (temp != null)
+				Console.WriteLine("tepm is {0}",temp);
+				if (temp != 0)
 				{
 					int index = Array.IndexOf(nums, temp);
-					nums[index] = nums[i + 1];
-					nums[i + 1] = (int)temp;
+					nums[index] = nums[count + 1];
+					nums[count + 1] = temp;
 					count++;
+					Console.WriteLine(index);
+
 				}
 				else
 					break;
