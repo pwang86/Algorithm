@@ -32,7 +32,7 @@ namespace Algorithm
 			//string[] stringArr = new string[] { "flower", "flow", "flight" };
 			//Console.WriteLine(LongestCommonPrefix(stringArr));
 
-			int[] array = new int[] { 1, 1, 2 };
+			int[] array = new int[] {0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
 			Console.WriteLine(RemoveDuplicates(array));
 
 		}
@@ -267,25 +267,17 @@ namespace Algorithm
 
 		public static int RemoveDuplicates(int[] nums)
 		{
+			/*first use FirstOrDefault and IndexOf, not work*/
 			if (nums.Length == 0)
 				return 0;
 			int count = 0;
-			int temp = 0;
-			for (int i = 0; i < nums.Length; i++)
+			for (int i = 1; i < nums.Length; i++)
 			{
-				temp = nums.FirstOrDefault(x => x > nums[i]);
-				Console.WriteLine("tepm is {0}",temp);
-				if (temp != 0)
+				if (nums[count] < nums[i])
 				{
-					int index = Array.IndexOf(nums, temp);
-					nums[index] = nums[count + 1];
-					nums[count + 1] = temp;
+					nums[count + 1] = nums[i];
 					count++;
-					Console.WriteLine(index);
-
 				}
-				else
-					break;
 
 			}
 			return (count + 1);
