@@ -32,8 +32,11 @@ namespace Algorithm
 			//string[] stringArr = new string[] { "flower", "flow", "flight" };
 			//Console.WriteLine(LongestCommonPrefix(stringArr));
 
-			int[] array = new int[] {0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
-			Console.WriteLine(RemoveDuplicates(array));
+			//int[] array = new int[] {0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
+			//Console.WriteLine(RemoveDuplicates(array));
+
+			int[] array = new int[] {0, 1, 2, 2, 3, 0, 4, 2 };
+			Console.WriteLine(RemoveElement(array,3));
 
 		}
 
@@ -281,6 +284,38 @@ namespace Algorithm
 
 			}
 			return (count + 1);
+		}
+
+		public static int RemoveElement(int[] nums, int val)
+		{
+			if (nums.Length == 0)
+			{
+				return 0;
+			}
+			int count = 0;
+			for (int i = 0; i < nums.Length; i++)
+			{
+				if (nums[i] == val)
+				{
+					for (int j = i+1; j < nums.Length; j++)
+					{
+						if (nums[j] != val)
+						{
+							int temp = 0;
+							temp = nums[i];
+							nums[i] = nums[j];
+							nums[j] = temp;
+							count++;
+							break;
+						}
+					}
+				}
+				else
+				{
+					count++;
+				}
+			}
+			return count;
 		}
 
 	}
