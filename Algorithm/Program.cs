@@ -318,5 +318,52 @@ namespace Algorithm
 			return count;
 		}
 
+		public static string CountAndSay(int n)
+		{
+			string result;
+			if (n == 1)
+			{
+				result = 1.ToString();
+			}
+			else
+			{
+				result = CountAndSay(n - 1);
+
+				if (result.Length == 1)
+					result = 11.ToString();
+				else
+				{
+					string temp = "";
+					for (int i = 0; i < result.Length;)
+					{
+						int count = 1;
+						for (int j = i + 1; j < result.Length; j++)
+						{
+
+							if (result[i] == result[j])
+							{
+								count++;
+							}
+
+							else
+							{
+								break;
+							}
+
+						}
+						// Console.WriteLine("{0}:{1}", count, result[i]);
+						temp = string.Concat(temp, count.ToString(), result[i].ToString());
+						// Console.WriteLine(temp);
+						i += count;
+					}
+					result = temp;
+				}
+			}
+
+			// Console.WriteLine("{0}.    {1}", n, result);
+			return result;
+
+		}
+
 	}
 }
