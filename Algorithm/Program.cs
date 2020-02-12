@@ -367,21 +367,8 @@ namespace Algorithm
 
 		public static int LengthOfLastWord(string s)
 		{
-			int l = s.Length - 1;
-			if (s[l].Equals(""))
-				return 0;
-			else
-			{
-				int count = 1;
-				int i = l;
-				while (!s[l - 1].Equals(""))
-				{
-					count++;
-					l -= 1;
-				}
-				return count;
-
-			}
+			string[] str = s.Split(new Char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+			return str.Length == 0 ? 0 : str[str.Length - 1].Length;
 
 		}
 
