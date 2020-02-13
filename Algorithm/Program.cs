@@ -372,5 +372,24 @@ namespace Algorithm
 
 		}
 
+		public static int MaxSubArray(int[] nums)
+		{
+			if (nums == null || nums.Length == 0)
+			{
+				return 0;
+			}
+
+			int max_current = nums[0];
+			int max_best = nums[0];
+
+			for (int i = 1; i < nums.Length; i++)
+			{
+				max_current = Math.Max(nums[i], max_current + nums[i]);
+				max_best = Math.Max(max_current, max_best);
+			}
+
+			return max_best;
+		}
+
 	}
 }
