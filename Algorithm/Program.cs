@@ -391,5 +391,19 @@ namespace Algorithm
 			return max_best;
 		}
 
+		public static int[] PlusOne(int[] digits)
+		{
+			int temp = 0;
+			for (int i = 0; i < digits.Length; i++)
+			{
+				temp += digits[i] * Convert.ToInt32(Math.Pow(10, digits.Length - 1 - i));
+			}
+			Console.WriteLine(temp);
+			temp += 1;
+			int[] result = temp.ToString().Select(x => int.Parse((x.ToString()))).ToArray();
+
+			return result;
+		}
+
 	}
 }
