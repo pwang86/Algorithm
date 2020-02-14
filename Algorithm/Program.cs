@@ -393,16 +393,39 @@ namespace Algorithm
 
 		public static int[] PlusOne(int[] digits)
 		{
-			int temp = 0;
-			for (int i = 0; i < digits.Length; i++)
+			if (digits[digits.Length - 1] != 9)
 			{
-				temp += digits[i] * Convert.ToInt32(Math.Pow(10, digits.Length - 1 - i));
+				digits[digits.Length - 1] += 1;
+				return digits;
 			}
-			Console.WriteLine(temp);
-			temp += 1;
-			int[] result = temp.ToString().Select(x => int.Parse((x.ToString()))).ToArray();
-
-			return result;
+			else
+			{
+				Stack<int> temp = new Stack<int>();
+				temp.Push(0);
+				bool addOne = true;
+				for (int i = digits.Length - 2; i >= 0; i--)
+				{
+					if (digits[i] == 9 && addOne)
+					{
+						temp.Push(0);
+					}
+					else if (digits[i] != 9 && addOne)
+					{
+						temp.Push(digits[i] + 1);
+						addOne = false;
+					}
+					else
+					{
+						temp.Push(digits[i]);
+						addOne = false;
+					}
+				}
+				if (addOne)
+				{
+					temp.Push(1);
+				}
+				return temp.ToArray();
+			}
 		}
 
 	}
