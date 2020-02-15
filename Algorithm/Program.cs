@@ -35,8 +35,10 @@ namespace Algorithm
 			//int[] array = new int[] {0, 0, 1, 1, 1, 2, 2, 3, 3, 4 };
 			//Console.WriteLine(RemoveDuplicates(array));
 
-			int[] array = new int[] {0, 1, 2, 2, 3, 0, 4, 2 };
-			Console.WriteLine(RemoveElement(array,3));
+			//int[] array = new int[] {0, 1, 2, 2, 3, 0, 4, 2 };
+			//Console.WriteLine(RemoveElement(array,3));
+
+			Console.WriteLine(ClimbStairs(44));
 
 		}
 
@@ -428,5 +430,54 @@ namespace Algorithm
 			}
 		}
 
+		public static string AddBinary(string a, string b)
+		{
+			int over = 0;
+			StringBuilder sb = new StringBuilder();
+
+			for (int indexA = a.Length - 1, indexB = b.Length - 1; indexA >= 0 || indexB >= 0; indexA--, indexB--)
+			{
+				// - 48 is to convert char into int, 48 equals '0' in ASCII
+				var curA = indexA >= 0 ? a[indexA] - 48 : 0;
+				var curB = indexB >= 0 ? b[indexB] - 48 : 0;
+				var sum = curA + curB + over;
+
+				if (sum > 1)
+				{
+					sb.Insert(0, sum % 2);
+					over = 1;
+				}
+				else
+				{
+					sb.Insert(0, sum);
+					over = 0;
+				}
+			}
+			if (over == 1)
+			{
+				sb.Insert(0, '1');
+			}
+
+			return sb.ToString();
+
+		}
+
+		public static int ClimbStairs(int n)
+		{
+			if (n == 1)
+			{
+				return 1;
+			}
+			int a = 1;
+			int b = 2;
+			for (int i = 3; i <= n; i++)
+			{
+				int c = a + b;
+				a = b;
+				b = c;
+			}
+			return b;
+
+		}
 	}
 }
