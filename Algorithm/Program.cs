@@ -479,5 +479,24 @@ namespace Algorithm
 			return b;
 
 		}
+
+		//public static ListNode DeleteDuplicates(ListNode head)
+		//{
+		//	if (head == null || head.next == null)
+		//		return head;
+		//	ListNode start = head;
+		//	while (start.next != null)
+		//	{
+		//		if (start.val == start.next.val)
+		//		{
+		//			start.next = start.next.next;
+		//		}
+		//		else
+		//		{
+		//			start = start.next;
+		//		}
+		//	}
+		//	return head;
+		//}
 	}
 }
