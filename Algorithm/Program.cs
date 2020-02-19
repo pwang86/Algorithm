@@ -561,18 +561,52 @@ namespace Algorithm
 		// iteration
 		//Queue<TreeNode> q = new Queue<TreeNode>();
 		//q.Enqueue(root);
-  //      q.Enqueue(root);
-  //      while(q.Any()){
-  //          TreeNode t1 = q.Dequeue();
+		//      q.Enqueue(root);
+		//      while(q.Any()){
+		//          TreeNode t1 = q.Dequeue();
 		//TreeNode t2 = q.Dequeue();
-  //          if (t1 == null && t2 == null) continue;
-  //          if (t1 == null || t2 == null) return false;
-  //          if (t1.val != t2.val) return false;
-  //          q.Enqueue(t1.left);
-  //          q.Enqueue(t2.right);
-  //          q.Enqueue(t1.right);
-  //          q.Enqueue(t2.left);
-  //      }
-  //      return true;
+		//          if (t1 == null && t2 == null) continue;
+		//          if (t1 == null || t2 == null) return false;
+		//          if (t1.val != t2.val) return false;
+		//          q.Enqueue(t1.left);
+		//          q.Enqueue(t2.right);
+		//          q.Enqueue(t1.right);
+		//          q.Enqueue(t2.left);
+		//      }
+		//      return true;
+
+		//public static int MaxDepth(TreeNode root)
+		//{
+		//	if (root == null)
+		//		return 0;
+		//	Queue<TreeNode> q = new Queue<TreeNode>();
+		//	q.Enqueue(root);
+		//	int count = 1;
+		//	while (q.Any())
+		//	{
+		//		TreeNode t = q.Dequeue();
+		//		if (t.left != null && t.right != null)
+		//		{
+		//			count++;
+		//			q.Enqueue(t.left);
+		//			q.Enqueue(t.right);
+		//		}
+		//		if (t.left != null || t.right != null)
+		//		{
+		//			if (t.left == null)
+		//			{
+		//				count++;
+		//				q.Enqueue(t.right);
+		//			}
+		//			else if (t.right == null)
+		//			{
+		//				count++;
+		//				q.Enqueue(t.left);
+		//			}
+		//		}
+
+		//	}
+		//	return count;
+		//}
 	}
 }
