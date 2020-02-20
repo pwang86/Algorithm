@@ -577,36 +577,29 @@ namespace Algorithm
 
 		//public static int MaxDepth(TreeNode root)
 		//{
-		//	if (root == null)
-		//		return 0;
-		//	Queue<TreeNode> q = new Queue<TreeNode>();
-		//	q.Enqueue(root);
-		//	int count = 1;
-		//	while (q.Any())
-		//	{
-		//		TreeNode t = q.Dequeue();
-		//		if (t.left != null && t.right != null)
-		//		{
-		//			count++;
-		//			q.Enqueue(t.left);
-		//			q.Enqueue(t.right);
-		//		}
-		//		if (t.left != null || t.right != null)
-		//		{
-		//			if (t.left == null)
-		//			{
-		//				count++;
-		//				q.Enqueue(t.right);
-		//			}
-		//			else if (t.right == null)
-		//			{
-		//				count++;
-		//				q.Enqueue(t.left);
-		//			}
-		//		}
-
-		//	}
-		//	return count;
+		//if(root == null)
+  //          return 0;
+  //      Queue<TreeNode> q = new Queue<TreeNode>();
+		//q.Enqueue(root);
+  //      int count = 0;
+  //      while(q.Any()){
+  //          int length = q.Count;
+		//count++;
+  //          for(int i = 0; i<length; i++){
+  //              TreeNode t = q.Dequeue();
+  //              if(t.left != null) 
+  //              { 
+  //                q.Enqueue(t.left); 
+  //              }
+  //              if(t.right != null)
+  //              {
+  //                q.Enqueue(t.right);
+  //              }
+  //          }
+  //      }   
+  //      return count;    
 		//}
+
+
 	}
 }
