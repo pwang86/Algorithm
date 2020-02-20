@@ -578,28 +578,57 @@ namespace Algorithm
 		//public static int MaxDepth(TreeNode root)
 		//{
 		//if(root == null)
-  //          return 0;
-  //      Queue<TreeNode> q = new Queue<TreeNode>();
+		//          return 0;
+		//      Queue<TreeNode> q = new Queue<TreeNode>();
 		//q.Enqueue(root);
-  //      int count = 0;
-  //      while(q.Any()){
-  //          int length = q.Count;
+		//      int count = 0;
+		//      while(q.Any()){
+		//          int length = q.Count;
 		//count++;
-  //          for(int i = 0; i<length; i++){
-  //              TreeNode t = q.Dequeue();
-  //              if(t.left != null) 
-  //              { 
-  //                q.Enqueue(t.left); 
-  //              }
-  //              if(t.right != null)
-  //              {
-  //                q.Enqueue(t.right);
-  //              }
-  //          }
-  //      }   
-  //      return count;    
+		//          for(int i = 0; i<length; i++){
+		//              TreeNode t = q.Dequeue();
+		//              if(t.left != null) 
+		//              { 
+		//                q.Enqueue(t.left); 
+		//              }
+		//              if(t.right != null)
+		//              {
+		//                q.Enqueue(t.right);
+		//              }
+		//          }
+		//      }   
+		//      return count;    
 		//}
 
+		//public static IList<IList<int>> LevelOrderBottom(TreeNode root)
+		//{
+		//	if (root == null)
+		//	{
+		//		return null;
+		//	}
+		//	Stack<Treenode> s = new Stack<Treenode>();
+		//	s.Push(root);
+		//	while (s.Any())
+		//	{
+		//		int length = s.Count;
+		//		for (int i = 0; i < length; i++)
+		//		{
+		//			if (s.left != null)
+		//			{
+		//				s.Push(s.left);
+		//			}
+		//			if (s.right != null)
+		//			{
+		//				s.Push(s.right);
+		//			}
+		//		}
+		//	}
+		//	List<int> ll = new List<int>();
+		//	foreach (var item in s)
+		//	{
+		//		ll.Add(item.Pop().val);
+		//	}
+		//}
 
 	}
 }
