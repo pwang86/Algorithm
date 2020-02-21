@@ -630,5 +630,41 @@ namespace Algorithm
 		//	}
 		//}
 
+		//public static IList<IList<int>> LevelOrderBottom(TreeNode root)
+		//{
+		//	var ll = new List<IList<int>>();
+		//	if (root == null)
+		//	{
+		//		return ll;
+		//	}
+		//	Queue<TreeNode> q = new Queue<TreeNode>();
+		//	q.Enqueue(root);
+		//	ll.Add(new List<int> { root.val });
+		//	while (q.Any())
+		//	{
+		//		int length = q.Count;
+		//		var l = new List<int>();
+		//		for (int i = 0; i < length; i++)
+		//		{
+		//			TreeNode t = q.Dequeue();
+		//			if (t.left != null)
+		//			{
+		//				q.Enqueue(t.left);
+		//				l.Add(t.left.val);
+		//			}
+		//			if (t.right != null)
+		//			{
+		//				q.Enqueue(t.right);
+		//				l.Add(t.right.val);
+		//			}
+		//		}
+		//		if (q.Any())
+		//		{
+		//			ll.Add(l);
+		//		}
+		//	}
+		//	ll.Reverse();
+		//	return ll;
+		//}
 	}
 }
