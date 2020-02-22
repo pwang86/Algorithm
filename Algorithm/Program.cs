@@ -686,5 +686,13 @@ namespace Algorithm
 		//	};
 		//	return root;
 		//}
+
+		public bool IsBalanced(TreeNode root)
+		{
+			if (root = null)
+				return true;
+			bool result = false;
+			return result;
+		}
 	}
 }
