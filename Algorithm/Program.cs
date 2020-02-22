@@ -666,5 +666,25 @@ namespace Algorithm
 		//	ll.Reverse();
 		//	return ll;
 		//}
+
+		//public static TreeNode SortedArrayToBST(int[] nums)
+		//{
+		//	return SortedRecursion(0, nums.Length - 1, nums);
+		//}
+
+		//public static TreeNode SortedRecursion(int start, int end, int[] nums)
+		//{
+		//	if (start > end)
+		//	{
+		//		return null;
+		//	}
+		//	int half = (end - start) / 2 + start;
+		//	var root = new TreeNode(nums[half])
+		//	{
+		//		left = SortedRecursion(start, half - 1, nums),
+		//		right = SortedRecursion(half + 1, end, nums)
+		//	};
+		//	return root;
+		//}
 	}
 }
