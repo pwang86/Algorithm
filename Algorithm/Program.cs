@@ -687,12 +687,28 @@ namespace Algorithm
 		//	return root;
 		//}
 
-		public bool IsBalanced(TreeNode root)
-		{
-			if (root = null)
-				return true;
-			bool result = false;
-			return result;
-		}
+		//public static bool IsBalanced(TreeNode root)
+		//{
+		//	if (root == null) return true;
+		//	var left = IsBalancedHelper(root.left);
+		//	var right = IsBalancedHelper(root.right);
+
+		//	if (left == -1 || right == -1) return false;
+		//	if (Math.Abs(left - right) >= 2) return false;
+
+		//	return true;
+		//}
+
+		//private static int IsBalancedHelper(TreeNode root)
+		//{
+		//	if (root == null) return 0;
+		//	var left = IsBalancedHelper(root.left);
+		//	var right = IsBalancedHelper(root.right);
+
+		//	if (left == -1 || right == -1) return -1;
+		//	if (Math.Abs(left - right) >= 2) return -1;
+
+		//	return Math.Max(left, right) + 1;
+		//}
 	}
 }
