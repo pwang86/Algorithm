@@ -710,5 +710,28 @@ namespace Algorithm
 
 		//	return Math.Max(left, right) + 1;
 		//}
+
+		//public static int MinDepth(TreeNode root)
+		//{
+		//	if (root == null)
+		//		return 0;
+		//	Queue<TreeNode> q = new Queue<TreeNode>();
+		//	q.Enqueue(root);
+		//	int height = 0;
+
+		//	while (q.Any())
+		//	{
+		//		height++;
+		//		int length = q.Count;
+		//		for (int i = 0; i < length; i++)
+		//		{
+		//			TreeNode temp = q.Dequeue();
+		//			if (temp.left == null && temp.right == null) return height;
+		//			if (temp.left != null) q.Enqueue(temp.left);
+		//			if (temp.right != null) q.Enqueue(temp.right);
+		//		}
+		//	}
+		//	return height;
+		//}
 	}
 }
