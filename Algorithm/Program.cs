@@ -742,5 +742,31 @@ namespace Algorithm
 		//	return HasPathSum(root.left, sum - root.val) || HasPathSum(root.right, sum - root.val);
 
 		//}
+
+		public static IList<IList<int>> Generate(int numRows)
+		{
+			if (numRows == 0)
+				return 0;
+
+			var ll = new List<IList<int>>();
+			var l = new List<int>();
+
+			for (int i = 1; i <= numRows; i++)
+			{
+				if (i < 3)
+				{
+					l.Add(1);
+				}
+				if (i >= 3)
+				{
+					while ()
+					{
+						l.Insert(i - 2, l[0] + l[i - 2]);
+					}
+				}
+				ll.Add(l);
+			}
+			return ll;
+		}
 	}
 }
