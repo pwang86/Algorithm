@@ -758,6 +758,20 @@ namespace Algorithm
 		//	}
 		//	return ll;
 		//}
-	
+
+		//public static IList<int> GetRow(int rowIndex)
+		//{
+		//	var list = new List<int>();
+		//	for (int i = 0; i <= rowIndex; i++)
+		//	{
+		//		var temp = new List<int>();
+		//		for (int j = 0; j <= i; j++)
+		//		{
+		//			temp.Add(j == 0 || j == i ? 1 : (list[j - 1] + list[j]));
+		//		}
+		//		list = temp;
+		//	}
+		//	return list;
+		//}
 	}
 }
