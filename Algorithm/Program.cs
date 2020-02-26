@@ -743,30 +743,21 @@ namespace Algorithm
 
 		//}
 
-		public static IList<IList<int>> Generate(int numRows)
-		{
-			if (numRows == 0)
-				return 0;
+		//public static IList<IList<int>> Generate(int numRows)
+		//{
+		//	var ll = new List<IList<int>>();
 
-			var ll = new List<IList<int>>();
-			var l = new List<int>();
-
-			for (int i = 1; i <= numRows; i++)
-			{
-				if (i < 3)
-				{
-					l.Add(1);
-				}
-				if (i >= 3)
-				{
-					while ()
-					{
-						l.Insert(i - 2, l[0] + l[i - 2]);
-					}
-				}
-				ll.Add(l);
-			}
-			return ll;
-		}
+		//	for (int i = 0; i < numRows; i++)
+		//	{
+		//		var l = new List<int>();
+		//		for (int j = 0; j <= i; j++)
+		//		{
+		//			l.Add((j == 0 || j == i) ? 1 : ll[i - 1][j - 1] + ll[i - 1][j]);
+		//		}
+		//		ll.Add(l);
+		//	}
+		//	return ll;
+		//}
+	
 	}
 }
