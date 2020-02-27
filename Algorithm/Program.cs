@@ -776,15 +776,29 @@ namespace Algorithm
 
 		public static int MaxProfit(int[] prices)
 		{
-			int result = 0;
-			for (int i = 0; i < prices.Length; i++)
+			//int result = 0;
+			//for (int i = 0; i < prices.Length; i++)
+			//{
+			//	for (int j = i + 1; j <= prices.Length - 1; j++)
+			//	{
+			//		result = Math.Max(result, prices[j] - prices[i]);
+			//	}
+			//}
+			//return result;
+
+			//optimized
+			var max_so_far = 0;
+			var max_current = 0;
+
+			for (int i = 1; i < prices.Length; i++)
 			{
-				for (int j = i + 1; j <= prices.Length - 1; j++)
-				{
-					result = Math.Max(result, prices[j] - prices[i]);
-				}
+				max_current = Math.Max(0, max_current + prices[i] - prices[i - 1]);
+				max_so_far = Math.Max(max_current, max_so_far);
 			}
-			return result;
+
+			return max_so_far;
 		}
+	}
+
 	}
 }
