@@ -812,6 +812,26 @@ namespace Algorithm
 			return maxValue;
 		}
 
+		public static bool IsPalindrome(string s)
+		{
+			if (string.IsNullOrEmpty(s))
+				return true;
+			char[] arr = s.ToLower().Where(c => Char.IsLetterOrDigit(c)).ToArray();
+			Console.WriteLine(arr);
+			int i = 0;
+			int j = arr.Length - 1;
+			while (i <= j)
+			{
+				if (arr[i] != arr[j])
+					return false;
+				else
+				{
+					i++;
+					j--;
+				}
+			}
+			return true;
+		}
 
 	}
 }
