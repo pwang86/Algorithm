@@ -833,5 +833,9 @@ namespace Algorithm
 			return true;
 		}
 
+		public static int SingleNumber(int[] nums)
+		{
+			return nums.Aggregate(0, (current, i) => current ^ i);
+		}
 	}
 }
