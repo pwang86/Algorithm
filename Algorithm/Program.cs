@@ -836,6 +836,21 @@ namespace Algorithm
 		public static int SingleNumber(int[] nums)
 		{
 			return nums.Aggregate(0, (current, i) => current ^ i);
+
+			// lower solution
+			//HashSet<int> tempSet = new HashSet<int>();
+			//for (int i = 0; i < nums.Length; i++)
+			//{
+			//	if (tempSet.Contains(nums[i]))
+			//	{
+			//		tempSet.Remove(nums[i]);
+			//	}
+			//	else
+			//	{
+			//		tempSet.Add(nums[i]);
+			//	}
+			//}
+			//return tempSet.First();
 		}
 	}
 }
