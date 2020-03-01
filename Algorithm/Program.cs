@@ -868,6 +868,15 @@ namespace Algorithm
 		//	}
 		//	return false;
 
+		//// Option 2
+		//if(head==null) return false;
+  //      if(head.next == head) return true;
+        
+  //      var temp = head.next;
+		//head.next = head;
+  //      return HasCycle(temp);
 		//}
+
+
 	}
 }
