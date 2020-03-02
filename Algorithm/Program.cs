@@ -879,17 +879,47 @@ namespace Algorithm
 
 		// option 3
 		//HashSet<ListNode> temp = new HashSet<ListNode>();
-  //      while(head!=null){
-  //          if(temp.Contains(head)){
-  //              return true;
-  //          }
-  //          else{
-  //              temp.Add(head);
-  //          }
+		//      while(head!=null){
+		//          if(temp.Contains(head)){
+		//              return true;
+		//          }
+		//          else{
+		//              temp.Add(head);
+		//          }
 		//	head = head.next;
-  //      }
-  //      return false;
+		//      }
+		//      return false;
 
+		//}
+
+		//public class MinStack
+		//{
+
+		//	/** initialize your data structure here. */
+		//	public MinStack()
+		//	{
+
+		//	}
+
+		//	public void Push(int x)
+		//	{
+
+		//	}
+
+		//	public void Pop()
+		//	{
+
+		//	}
+
+		//	public int Top()
+		//	{
+
+		//	}
+
+		//	public int GetMin()
+		//	{
+
+		//	}
 		//}
 	}
 }
