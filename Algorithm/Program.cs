@@ -870,13 +870,26 @@ namespace Algorithm
 
 		//// Option 2
 		//if(head==null) return false;
-  //      if(head.next == head) return true;
-        
-  //      var temp = head.next;
+		//      if(head.next == head) return true;
+
+		//      var temp = head.next;
 		//head.next = head;
-  //      return HasCycle(temp);
+		//      return HasCycle(temp);
 		//}
 
+		// option 3
+		//HashSet<ListNode> temp = new HashSet<ListNode>();
+  //      while(head!=null){
+  //          if(temp.Contains(head)){
+  //              return true;
+  //          }
+  //          else{
+  //              temp.Add(head);
+  //          }
+		//	head = head.next;
+  //      }
+  //      return false;
 
+		//}
 	}
 }
