@@ -896,30 +896,47 @@ namespace Algorithm
 		//{
 
 		//	/** initialize your data structure here. */
-		//	public MinStack()
+		//readonly Stack<Tuple<int, int>> _mStack = new Stack<Tuple<int, int>>();
+		//public MinStack()
+		//{
+
+		//}
+
+		//public void Push(int x)
+		//{
+		//	if (GetMin() == int.MinValue)
 		//	{
-
+		//		var newNode = new Tuple<int, int>(x, x);
+		//		_mStack.Push(newNode);
 		//	}
-
-		//	public void Push(int x)
+		//	else
 		//	{
-
+		//		var newNode = new Tuple<int, int>(x, Math.Min(x, GetMin()));
+		//		_mStack.Push(newNode);
 		//	}
+		//}
 
-		//	public void Pop()
+		//public void Pop()
+		//{
+		//	_mStack.Pop();
+		//}
+
+		//public int Top()
+		//{
+		//	if (_mStack.Count == 0)
 		//	{
-
+		//		return int.MinValue;
 		//	}
+		//	return _mStack.Peek().Item1;
+		//}
 
-		//	public int Top()
+		//public int GetMin()
+		//{
+		//	if (_mStack.Count == 0)
 		//	{
-
+		//		return int.MinValue;
 		//	}
-
-		//	public int GetMin()
-		//	{
-
-		//	}
+		//	return _mStack.Peek().Item2;
 		//}
 	}
 }
