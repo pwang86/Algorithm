@@ -962,5 +962,16 @@ namespace Algorithm
 		//	}
 		//	return new int[] { -1, -1 };
 		//}
+
+		public static string ConvertToTitle(int n)
+		{
+			StringBuilder sb = new StringBuilder();
+			while (n > 0)
+			{
+				sb.Insert(0, (char)((n - 1) % 26 + 'A'));
+				n = (n - 1) / 26;
+			}
+			return sb.ToString();
+		}
 	}
 }
