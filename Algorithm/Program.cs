@@ -994,6 +994,27 @@ namespace Algorithm
 					return (int)key;
 			}
 			return -1;
+
+			// Moore's voting algorithm
+			//int count = 1;
+			//int temp = nums[0];
+			//for (int i = 1; i < nums.Length; i++)
+			//{
+			//	if (count == 0)
+			//	{
+			//		temp = nums[i];
+			//	}
+
+			//	if (temp != nums[i])
+			//	{
+			//		count--;
+			//	}
+			//	else
+			//	{
+			//		count++;
+			//	}
+			//}
+			//return temp;
 		}
 
 	}
