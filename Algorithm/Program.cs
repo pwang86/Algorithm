@@ -973,5 +973,28 @@ namespace Algorithm
 			}
 			return sb.ToString();
 		}
+
+		public static int MajorityElement(int[] nums)
+		{
+			int length = (int)(nums.Length / 2);
+			var temp = new Hashtable();
+			foreach (var item in nums)
+			{
+				if (temp.ContainsKey(item))
+				{
+					temp[item] = (int)temp[item] + 1;
+				}
+				else
+					temp.Add(item, 1);
+			}
+
+			foreach (var key in temp.Keys)
+			{
+				if ((int)temp[key] > length)
+					return (int)key;
+			}
+			return -1;
+		}
+
 	}
 }
