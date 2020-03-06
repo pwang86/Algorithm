@@ -1016,6 +1016,11 @@ namespace Algorithm
 			//}
 			//return temp;
 		}
+		
+		public static int TitleToNumber(string s)
+		{
+			return s.Select(c => c - 'A' + 1).Aggregate(0, (temp, current) => temp * 26 + current);
+		}
 
 	}
 }
