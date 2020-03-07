@@ -1022,5 +1022,15 @@ namespace Algorithm
 			return s.Select(c => c - 'A' + 1).Aggregate(0, (temp, current) => temp * 26 + current);
 		}
 
+		public static int TrailingZeroes(int n)
+		{
+			int count = 0;
+			for (int i = n / 5; i > 0; i /= 5)
+			{
+				count = count + i;
+			}
+			return count;
+		}
+
 	}
 }
