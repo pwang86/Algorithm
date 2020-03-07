@@ -1030,6 +1030,22 @@ namespace Algorithm
 				count = count + i;
 			}
 			return count;
+
+			// slower solution
+			//double temp = 1;
+			//while (n != 1)
+			//{
+			//	temp = temp * n;
+			//	n--;
+			//}
+			//Console.WriteLine(temp);
+			//int count = 0;
+			//while (temp % 10 == 0)
+			//{
+			//	temp = temp / 10;
+			//	count++;
+			//}
+			//return count;
 		}
 
 	}
