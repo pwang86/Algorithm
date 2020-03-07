@@ -1048,5 +1048,21 @@ namespace Algorithm
 			//return count;
 		}
 
+		public void Rotate(int[] nums, int k)
+		{
+			Stack<int> tempStack = new Stack<int>();
+			foreach (int item in nums)
+			{
+				tempStack.Push(item);
+			}
+			while (k >= 1)
+			{
+				int i = tempStack.Pop();
+				tempStack.Push(i);
+				k--;
+			}
+			Console.WriteLine(tempStack.ToArray());
+		}
+
 	}
 }
