@@ -1055,6 +1055,19 @@ namespace Algorithm
 
 			Array.Reverse(nums, 0, k);
 			Array.Reverse(nums, k, nums.Length - k);
+
+			    //faster solution
+
+				//int[] a = new int[nums.Length];
+				//for (int i = 0; i < nums.Length; i++)
+				//{
+				//	a[(i + k) % nums.Length] = nums[i];
+				//}
+				//for (int i = 0; i < nums.Length; i++)
+				//{
+				//	nums[i] = a[i];
+				//}
+		
 		}
 
 	}
