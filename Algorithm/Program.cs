@@ -1050,18 +1050,11 @@ namespace Algorithm
 
 		public void Rotate(int[] nums, int k)
 		{
-			Stack<int> tempStack = new Stack<int>();
-			foreach (int item in nums)
-			{
-				tempStack.Push(item);
-			}
-			while (k >= 1)
-			{
-				int i = tempStack.Pop();
-				tempStack.Push(i);
-				k--;
-			}
-			Console.WriteLine(tempStack.ToArray());
+			k = k % nums.Length;
+			Array.Reverse(nums);
+
+			Array.Reverse(nums, 0, k);
+			Array.Reverse(nums, k, nums.Length - k);
 		}
 
 	}
