@@ -1098,6 +1098,17 @@ namespace Algorithm
 			return bits;
 		}
 
+		public static int Rob(int[] nums)
+		{
+			var temp = new int[nums.Length + 1, 2];
+			for (int i = 1; i <= nums.Length; i++)
+			{
+				temp[i, 0] = Math.Max(temp[i - 1, 0], temp[i - 1, 1]);
+				temp[i, 1] = temp[i - 1, 0] + nums[i - 1];
+			}
+			return Math.Max(temp[nums.Length, 0], temp[nums.Length, 1]);
+		}
+
 
 	}
 }
