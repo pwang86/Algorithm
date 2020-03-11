@@ -1107,6 +1107,24 @@ namespace Algorithm
 				temp[i, 1] = temp[i - 1, 0] + nums[i - 1];
 			}
 			return Math.Max(temp[nums.Length, 0], temp[nums.Length, 1]);
+
+			// faster way
+			//int evenSum = 0;
+			//int oddSum = 0;
+			//for (int i = 0; i < nums.Length; i++)
+			//{
+			//	if (i % 2 == 0)
+			//	{
+			//		evenSum += nums[i];
+			//		evenSum = evenSum > oddSum ? evenSum : oddSum;
+			//	}
+			//	else
+			//	{
+			//		oddSum += nums[i];
+			//		oddSum = oddSum > evenSum ? oddSum : evenSum;
+			//	}
+			//}
+			//return evenSum > oddSum ? evenSum : oddSum;
 		}
 
 
