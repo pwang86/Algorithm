@@ -1126,7 +1126,26 @@ namespace Algorithm
 			//}
 			//return evenSum > oddSum ? evenSum : oddSum;
 		}
+		public static bool IsHappy(int n)
+		{
+			var temp = new Dictionary<int, bool>();
+			int count = n;
+			while (!temp.ContainsKey(count))
+			{
+				temp.Add(count, true);
+				int value = count;
+				count = 0;
 
+				while (value != 0)
+				{
+					count += (value % 10) * (value % 10);
+					value /= 10;
+					// Console.WriteLine(count);
+				}
+				if (count == 1) return true;
+			}
+			return false;
+		}
 
 	}
 }
