@@ -1146,6 +1146,16 @@ namespace Algorithm
 			}
 			return false;
 		}
+		public static ListNode RemoveElements(ListNode head, int val)
+		{
+			while (head != null)
+			{
+				if (head.val == val)
+				{
 
-	}
+				}
+				head = head.next;
+			}
+
+		}
 }
