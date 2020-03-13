@@ -1146,28 +1146,23 @@ namespace Algorithm
 			}
 			return false;
 		}
-		public static ListNode RemoveElements(ListNode head, int val)
+
+		public static int CountPrimes(int n)
 		{
-			if (head == null)
+			if (n == 0 || n == 1)
+				return 0;
+			if (n == 2)
+				return 1;
+			int count = 0;
+			for (int i = 3; i <= n; i++)
 			{
-				return null;
-			}
-			/*if(head.next==null && head.val==val){
-				return null;
-			}*/
-			var temp = new ListNode(0);
-			temp.next = head;
-			var current = temp;
-			while (current != null)
-			{
-				while (current.next != null && current.next.val == val)
-				{
-					current.next = current.next.next;
-				}
-				current = current.next;
-			}
-			return temp.next;
+				i / ((int)Math.Sqrt(i));
+	
+			if (i)
 
 		}
+			return count;
+
 		}
+	}
 	}
