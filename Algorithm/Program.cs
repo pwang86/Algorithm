@@ -1148,14 +1148,26 @@ namespace Algorithm
 		}
 		public static ListNode RemoveElements(ListNode head, int val)
 		{
-			while (head != null)
+			if (head == null)
 			{
-				if (head.val == val)
-				{
-
-				}
-				head = head.next;
+				return null;
 			}
+			/*if(head.next==null && head.val==val){
+				return null;
+			}*/
+			var temp = new ListNode(0);
+			temp.next = head;
+			var current = temp;
+			while (current != null)
+			{
+				while (current.next != null && current.next.val == val)
+				{
+					current.next = current.next.next;
+				}
+				current = current.next;
+			}
+			return temp.next;
 
 		}
-}
+		}
+	}
