@@ -1149,20 +1149,41 @@ namespace Algorithm
 
 		public static int CountPrimes(int n)
 		{
-			var isNotPrime = new bool[n];
+			//var isNotPrime = new bool[n];
 
-			for (var i = 2; i < n; i++)
+			//for (var i = 2; i < n; i++)
+			//{
+			//	if (isNotPrime[i]) continue;
+			//	var start = i + i;
+			//	while (start < n)
+			//	{
+			//		isNotPrime[start] = true;
+			//		start += i;
+			//	}
+			//}
+			//// remove 0 and 1
+			//return isNotPrime.Skip(2).Count(x => x == false);
+			var isPrime = new bool[n];
+
+			for (int i = 2; i < n; i++)
 			{
-				if (isNotPrime[i]) continue;
-				var start = i + i;
-				while (start < n)
+				isPrime[i] = true;
+			}
+
+			for (int i = 2; i * i < n; i++)
+			{
+				if (!isPrime[i]) continue;
+				for (int j = i * i; j < n; j += i)
 				{
-					isNotPrime[start] = true;
-					start += i;
+					isPrime[j] = false;
 				}
 			}
-			// remove 0 and 1
-			return isNotPrime.Skip(2).Count(x => x == false);
+			int count = 0;
+			for (int i = 2; i < n; i++)
+			{
+				if (isPrime[i]) count++;
+			}
+			return count;
 		}
 
 		public bool IsIsomorphic(string s, string t)
