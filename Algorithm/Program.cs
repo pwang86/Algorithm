@@ -1165,9 +1165,41 @@ namespace Algorithm
 			return isNotPrime.Skip(2).Count(x => x == false);
 		}
 
-		public static bool IsIsomorphic(string s, string t)
+		public bool IsIsomorphic(string s, string t)
 		{
-
+			if (s.Length != t.Length)
+			{
+				return false;
+			}
+			var str1 = new Dictionary<char, char>();
+			var str2 = new Dictionary<char, char>();
+			int length = s.Length;
+			for (int i = 0; i < length; i++)
+			{
+				if (str1.ContainsKey(s[i]))
+				{
+					if (str1[s[i]] != t[i])
+					{
+						return false;
+					}
+				}
+				else
+				{
+					str1.Add(s[i], t[i]);
+				}
+				if (str2.ContainsKey(t[i]))
+				{
+					if (str2[t[i]] != s[i])
+					{
+						return false;
+					}
+				}
+				else
+				{
+					str2.Add(t[i], s[i]);
+				}
+			}
+			return true;
 		}
 
 	}
