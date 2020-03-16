@@ -1223,5 +1223,35 @@ namespace Algorithm
 			return true;
 		}
 
+		//public ListNode ReverseList(ListNode head)
+		//{
+		//	var tempStack = new Stack<ListNode>();
+		//	var tempHead = head;
+		//	while (tempHead != null)
+		//	{
+		//		tempStack.Push(tempHead);
+		//		// Console.WriteLine(head.val);
+		//		tempHead = tempHead.next;
+		//	}
+		//	/*
+		//	foreach(var item in tempStack){
+		//		Console.WriteLine(item.val);
+		//	}
+		//	*/
+		//	var temp = new ListNode(0);
+		//	tempHead = temp;
+		//	while (tempStack.Count != 0)
+		//	{
+		//		// Console.WriteLine(tempStack.Pop().val);
+		//		tempHead.next = tempStack.Pop();
+		//		tempHead = tempHead.next;
+		//		// temp = temp.next;
+		//		// Console.WriteLine(tempStack.Pop().val);
+		//	}
+		//	tempHead.next = null;
+		//	return temp.next;
+
+		//}
+
 	}
 	}
