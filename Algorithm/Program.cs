@@ -1251,6 +1251,15 @@ namespace Algorithm
 		//	tempHead.next = null;
 		//	return temp.next;
 
+		// another solution:
+		//var fakeHead = new ListNode(-1);
+  //      while(head!=null){
+  //          var next = head.next;
+		//head.next = fakeHead.next;
+  //          fakeHead.next = head;
+  //          head = next;
+  //      }
+  //      return fakeHead.next;
 		//}
 
 	}
