@@ -16,7 +16,7 @@ namespace Algorithm
 			//Console.WriteLine("Please enter an int array, separated by ,: ");
 			//string input = Console.ReadLine();
 			//string[] intArray = input.Split(',');
-			int[] a = new int[]{-3, 4, 3, 90 };
+			int[] a = new int[] { -3, 4, 3, 90 };
 			//int[] b = TwoSum(a, 0);
 			//Console.WriteLine("Result is :");
 			//foreach (var item in b)
@@ -50,13 +50,13 @@ namespace Algorithm
 			{
 				/*cannot compare target, because if [-3, 4, 3, 90 ] and 0, there will no two sum
 				if (nums[i] <= target)*/
-					int a = target - nums[i];
-					if (temp.ContainsValue(a))
-					{
-						b = new int[] { temp.Keys.OfType<int>().FirstOrDefault(x => (int)temp[x] == a), i };
-						return b;
-					}
-					temp.Add(i, nums[i]);
+				int a = target - nums[i];
+				if (temp.ContainsValue(a))
+				{
+					b = new int[] { temp.Keys.OfType<int>().FirstOrDefault(x => (int)temp[x] == a), i };
+					return b;
+				}
+				temp.Add(i, nums[i]);
 			}
 			/*Solution 1*/
 			//Hashtable temp = new Hashtable();
@@ -131,8 +131,8 @@ namespace Algorithm
 			int j = charArr.Length;
 			for (int i = 0; i < j; i++)
 			{
-				int num=0;
-				if ((i!=(j-1)) && charArr[i].Equals('I') && (charArr[i+1].Equals('V') || charArr[i + 1].Equals('X')))
+				int num = 0;
+				if ((i != (j - 1)) && charArr[i].Equals('I') && (charArr[i + 1].Equals('V') || charArr[i + 1].Equals('X')))
 				{
 					num = -1;
 				}
@@ -172,8 +172,8 @@ namespace Algorithm
 						default:
 							num = 0;
 							break;
-						}
 					}
+				}
 				result += num;
 			}
 			return result;
@@ -299,7 +299,7 @@ namespace Algorithm
 			{
 				if (nums[i] == val)
 				{
-					for (int j = i+1; j < nums.Length; j++)
+					for (int j = i + 1; j < nums.Length; j++)
 					{
 						if (nums[j] != val)
 						{
@@ -1016,7 +1016,7 @@ namespace Algorithm
 			//}
 			//return temp;
 		}
-		
+
 		public static int TitleToNumber(string s)
 		{
 			return s.Select(c => c - 'A' + 1).Aggregate(0, (temp, current) => temp * 26 + current);
@@ -1056,18 +1056,18 @@ namespace Algorithm
 			Array.Reverse(nums, 0, k);
 			Array.Reverse(nums, k, nums.Length - k);
 
-			    //faster solution
+			//faster solution
 
-				//int[] a = new int[nums.Length];
-				//for (int i = 0; i < nums.Length; i++)
-				//{
-				//	a[(i + k) % nums.Length] = nums[i];
-				//}
-				//for (int i = 0; i < nums.Length; i++)
-				//{
-				//	nums[i] = a[i];
-				//}
-		
+			//int[] a = new int[nums.Length];
+			//for (int i = 0; i < nums.Length; i++)
+			//{
+			//	a[(i + k) % nums.Length] = nums[i];
+			//}
+			//for (int i = 0; i < nums.Length; i++)
+			//{
+			//	nums[i] = a[i];
+			//}
+
 		}
 
 		public static uint reverseBits(uint n)
@@ -1253,14 +1253,39 @@ namespace Algorithm
 
 		// another solution:
 		//var fakeHead = new ListNode(-1);
-  //      while(head!=null){
-  //          var next = head.next;
+		//      while(head!=null){
+		//          var next = head.next;
 		//head.next = fakeHead.next;
-  //          fakeHead.next = head;
-  //          head = next;
-  //      }
-  //      return fakeHead.next;
+		//          fakeHead.next = head;
+		//          head = next;
+		//      }
+		//      return fakeHead.next;
+
+		// recursive solution
+		//if(head == null || head.next == null){
+		//	return head;
+		//}
+		//var rest = ReverseList(head.next);
+
+		//head.next.next = head;
+		//head.next = null;
+
+		//return rest;
 		//}
 
-	}
+		//public static bool ContainsDuplicate(int[] nums)
+		//{
+		//	HashSet<int> temp = new HashSet<int>();
+		//	for (int i = 0; i < nums.Length; i++)
+		//	{
+		//		if (temp.Contains(nums[i]))
+		//			return true;
+		//		else
+		//		{
+		//			temp.Add(nums[i]);
+		//		}
+		//	}
+		//	return false;
+	     }
+		}
 	}
