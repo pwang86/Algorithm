@@ -1286,6 +1286,8 @@ namespace Algorithm
 		//		}
 		//	}
 		//	return false;
-	     }
-		}
+		// linq 
+		// return nums.Count() > nums.Distinct().Count();
+		// }
+	}
 	}
