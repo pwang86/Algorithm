@@ -1314,6 +1314,7 @@ namespace Algorithm
 		//public class MyStack
 		//{
 
+		//	private Queue tempQueue = new Queue();
 		//	/** Initialize your data structure here. */
 		//	public MyStack()
 		//	{
@@ -1323,26 +1324,33 @@ namespace Algorithm
 		//	/** Push element x onto stack. */
 		//	public void Push(int x)
 		//	{
-
+		//		tempQueue.Enqueue(x);
+		//		for (int i = 1; i < tempQueue.Count; i++)
+		//		{
+		//			tempQueue.Enqueue(tempQueue.Dequeue());
+		//		}
 		//	}
 
 		//	/** Removes the element on top of the stack and returns that element. */
 		//	public int Pop()
 		//	{
-
+		//		return (int)tempQueue.Dequeue();
 		//	}
 
 		//	/** Get the top element. */
 		//	public int Top()
 		//	{
-
+		//		return (int)tempQueue.Peek();
 		//	}
 
 		//	/** Returns whether the stack is empty. */
 		//	public bool Empty()
 		//	{
+		//		return tempQueue.Count == 0 ? true : false;
 
 		//	}
 		//}
+
+
 	}
 	}
