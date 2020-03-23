@@ -1368,17 +1368,18 @@ namespace Algorithm
 
 		public static bool IsPowerOfTwo(int n)
 		{
-			if (n == 1)
-				return true;
-			if (n == 0)
-				return false;
-			while (n % 2 == 0)
-			{
-				n = n / 2;
-				if (n == 1)
-					return true;
-			}
-			return false;
+			//if (n == 1)
+			//	return true;
+			//if (n == 0)
+			//	return false;
+			//while (n % 2 == 0)
+			//{
+			//	n = n / 2;
+			//	if (n == 1)
+			//		return true;
+			//}
+			//return false;
+			return (n != 0 && n < Int32.MaxValue && n > Int32.MinValue && (n & (n - 1)) == 0);
 		}
 
 	}
