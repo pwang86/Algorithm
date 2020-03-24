@@ -1424,5 +1424,17 @@ namespace Algorithm
 		//		return myStack.Count == 0 ? true : false;
 		//	}
 		//}
+
+        // public static bool IsPalindrome(ListNode head)
+		//{
+		//	HashSet<int> tempHash = new HashSet<int>();
+		//	Stack<int> tempStack = new Stack<int>();
+		//	while (head != null)
+		//	{
+		//		if (tempStack)
+		//			head = head.next;
+		//	}
+
+		//}
 	}
 	}
