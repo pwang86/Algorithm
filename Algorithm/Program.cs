@@ -1382,5 +1382,47 @@ namespace Algorithm
 			return (n != 0 && n < Int32.MaxValue && n > Int32.MinValue && (n & (n - 1)) == 0);
 		}
 
+		//public class MyQueue
+		//{
+
+		//	private Stack<int> myStack = new Stack<int>();
+		//	private Stack<int> tempStack = new Stack<int>();
+		//	/** Initialize your data structure here. */
+		//	public MyQueue()
+		//	{
+
+		//	}
+
+		//	/** Push element x to the back of queue. */
+		//	public void Push(int x)
+		//	{
+		//		tempStack.Push(x);
+		//		int length = tempStack.Count;
+		//		for (int i = 1; i < length; i++)
+		//		{
+		//			myStack.Push(tempStack.Peek());
+		//		}
+		//		// myStack.Push(x);
+		//	}
+
+		//	/** Removes the element from in front of queue and returns that element. */
+		//	public int Pop()
+		//	{
+		//		return (int)myStack.Pop();
+		//	}
+
+
+		//	/** Get the front element. */
+		//	public int Peek()
+		//	{
+		//		return (int)myStack.Peek();
+		//	}
+
+		//	/** Returns whether the queue is empty. */
+		//	public bool Empty()
+		//	{
+		//		return myStack.Count == 0 ? true : false;
+		//	}
+		//}
 	}
 	}
