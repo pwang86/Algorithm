@@ -1425,16 +1425,62 @@ namespace Algorithm
 		//	}
 		//}
 
-        // public static bool IsPalindrome(ListNode head)
+		//public static bool IsPalindrome(ListNode head)
 		//{
-		//	HashSet<int> tempHash = new HashSet<int>();
-		//	Stack<int> tempStack = new Stack<int>();
-		//	while (head != null)
+		//	if (head == null) return true;
+		//	int count = 0;
+		//	var start = head;
+		//	while (start != null)
 		//	{
-		//		if (tempStack)
-		//			head = head.next;
+		//		start = start.next;
+		//		count++;
+		//	}
+		//	head = ReverseLinkedList(head, (int)Math.Ceiling(count / 2.0), count);
+
+		//	int index = 1;
+		//	var end = head;
+		//	while (index < Math.Ceiling(count / 2.0) + 1)
+		//	{
+		//		end = end.next;
+		//		index++;
 		//	}
 
+		//	start = head;
+		//	while (end != null)
+		//	{
+		//		if (start.val != end.val)
+		//		{
+		//			return false;
+		//		}
+		//		end = end.next;
+		//		start = start.next;
+		//	}
+		//	return true;
+
+		//}
+
+		//public ListNode ReverseLinkedList(ListNode head, int m, int n)
+		//{
+		//	var fakehead = new ListNode(-1);
+		//	fakehead.next = head;
+
+		//	var start = fakehead;
+		//	var count = 1;
+		//	while (count < m)
+		//	{
+		//		start = start.next;
+		//		count++;
+		//	}
+
+		//	var next = start.next;
+		//	while (count++ < n)
+		//	{
+		//		var firstNode = next.next;
+		//		next.next = firstNode.next;
+		//		firstNode.next = start.next;
+		//		start.next = firstNode;
+		//	}
+		//	return fakehead.next;
 		//}
 	}
 	}
