@@ -1509,19 +1509,25 @@ namespace Algorithm
 		//int qVal = q.val;
 
 		//TreeNode node = root;
-  //      while(node!=null){
-  //          int rootVal = node.val;
-  //          if(pVal > rootVal && qVal > rootVal){
-  //              node = node.right;
-  //          }
-  //          else if(pVal<rootVal &&qVal<rootVal){
-  //              node = node.left;
-  //          }
-  //          else{
-  //              return node;
-  //          }
-  //      }
-  //      return null;
+		//      while(node!=null){
+		//          int rootVal = node.val;
+		//          if(pVal > rootVal && qVal > rootVal){
+		//              node = node.right;
+		//          }
+		//          else if(pVal<rootVal &&qVal<rootVal){
+		//              node = node.left;
+		//          }
+		//          else{
+		//              return node;
+		//          }
+		//      }
+		//      return null;
+		//}
+
+		//public void DeleteNode(ListNode node)
+		//{
+		//	node.val = node.next.val;
+		//	node.next = node.next.next;
 		//}
 	}
 	}
