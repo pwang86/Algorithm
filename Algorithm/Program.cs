@@ -1502,6 +1502,26 @@ namespace Algorithm
 		//	{
 		//		return root;
 		//	}
+
+		// iterative way
+
+		//int pVal = p.val;
+		//int qVal = q.val;
+
+		//TreeNode node = root;
+  //      while(node!=null){
+  //          int rootVal = node.val;
+  //          if(pVal > rootVal && qVal > rootVal){
+  //              node = node.right;
+  //          }
+  //          else if(pVal<rootVal &&qVal<rootVal){
+  //              node = node.left;
+  //          }
+  //          else{
+  //              return node;
+  //          }
+  //      }
+  //      return null;
 		//}
 	}
 	}
