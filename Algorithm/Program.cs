@@ -1529,5 +1529,18 @@ namespace Algorithm
 		//	node.val = node.next.val;
 		//	node.next = node.next.next;
 		//}
-	}
+
+		//public bool IsAnagram(string s, string t)
+		//{
+		//	if (s.Length != t.Length)
+		//		return false;
+		//	var temp = new int[256];
+		//	for (int i = 0; i < s.Length; i++)
+		//	{
+		//		temp[s[i]]++;
+		//		temp[t[i]]--;
+		//	}
+		//	return temp.All(x => x == 0);
+		//}
+		}
 	}
