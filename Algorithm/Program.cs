@@ -1541,6 +1541,23 @@ namespace Algorithm
 		//		temp[t[i]]--;
 		//	}
 		//	return temp.All(x => x == 0);
+
+		// sort:
+		//if(s.Length != t.Length){
+  //          return false;
+  //      }
+        
+  //      var str1 = s.ToCharArray();
+		//var str2 = t.ToCharArray();
+		//Array.Sort(str1);
+  //      Array.Sort(str2);
+  //      return Enumerable.SequenceEqual(str1, str2);
+  //      /*for (int i = 0; i <= str1.Length - 1; i++)
+  //          if(str1[i] != str2[i])
+  //              return false;
+  //      */
+
 		//}
+
 		}
-	}
+}
