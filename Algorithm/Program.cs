@@ -1557,6 +1557,28 @@ namespace Algorithm
   //              return false;
   //      */
 
+		// disctionary:
+		//if(s.Length != t.Length){
+  //          return false;
+  //      }
+        
+  //     Dictionary<char, int> temp = new Dictionary<char, int>();
+  //     for(int i = 0; i<s.Length; i++){
+  //          if(temp.ContainsKey(s[i])){
+  //              temp[s[i]]++;
+  //          }
+  //          else{
+  //              temp.Add(s[i],1);
+  //          }
+  //      }
+  //      for(int j = 0; j<t.Length; j++){
+  //          if((!temp.ContainsKey(t[j]))||temp[t[j]]==0)
+  //              return false;
+  //          temp[t[j]]--;
+            
+  //      }
+  //      return true;
+
 		//}
 
 		}
