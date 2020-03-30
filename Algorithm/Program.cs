@@ -1544,42 +1544,67 @@ namespace Algorithm
 
 		// sort:
 		//if(s.Length != t.Length){
-  //          return false;
-  //      }
-        
-  //      var str1 = s.ToCharArray();
+		//          return false;
+		//      }
+
+		//      var str1 = s.ToCharArray();
 		//var str2 = t.ToCharArray();
 		//Array.Sort(str1);
-  //      Array.Sort(str2);
-  //      return Enumerable.SequenceEqual(str1, str2);
-  //      /*for (int i = 0; i <= str1.Length - 1; i++)
-  //          if(str1[i] != str2[i])
-  //              return false;
-  //      */
+		//      Array.Sort(str2);
+		//      return Enumerable.SequenceEqual(str1, str2);
+		//      /*for (int i = 0; i <= str1.Length - 1; i++)
+		//          if(str1[i] != str2[i])
+		//              return false;
+		//      */
 
 		// disctionary:
 		//if(s.Length != t.Length){
-  //          return false;
-  //      }
-        
-  //     Dictionary<char, int> temp = new Dictionary<char, int>();
-  //     for(int i = 0; i<s.Length; i++){
-  //          if(temp.ContainsKey(s[i])){
-  //              temp[s[i]]++;
-  //          }
-  //          else{
-  //              temp.Add(s[i],1);
-  //          }
-  //      }
-  //      for(int j = 0; j<t.Length; j++){
-  //          if((!temp.ContainsKey(t[j]))||temp[t[j]]==0)
-  //              return false;
-  //          temp[t[j]]--;
-            
-  //      }
-  //      return true;
+		//          return false;
+		//      }
+
+		//     Dictionary<char, int> temp = new Dictionary<char, int>();
+		//     for(int i = 0; i<s.Length; i++){
+		//          if(temp.ContainsKey(s[i])){
+		//              temp[s[i]]++;
+		//          }
+		//          else{
+		//              temp.Add(s[i],1);
+		//          }
+		//      }
+		//      for(int j = 0; j<t.Length; j++){
+		//          if((!temp.ContainsKey(t[j]))||temp[t[j]]==0)
+		//              return false;
+		//          temp[t[j]]--;
+
+		//      }
+		//      return true;
 
 		//}
 
-		}
+		//IList<string> temp = new List<string>();
+		//public IList<string> BinaryTreePaths(TreeNode root)
+		//{
+		//	FindNext(root, "");
+		//	return temp;
+		//}
+		//public void FindNext(TreeNode root, string str)
+		//{
+		//	if (root != null)
+		//	{
+		//		if (root.left == null && root.right == null)
+		//		{
+		//			temp.Add(str + root.val);
+		//		}
+		//		else
+		//		{
+		//			str = str + root.val + "->";
+		//			if (root.left != null)
+		//				FindNext(root.left, str);
+		//			if (root.right != null)
+		//				FindNext(root.right, str);
+		//		}
+		//	}
+		//}
+
+	}
 }
