@@ -1606,5 +1606,22 @@ namespace Algorithm
 		//	}
 		//}
 
+		//public stataic int AddDigits(int num)
+		//{
+		//	int result = num;
+		//	while (result >= 10)
+		//	{
+		//		int sum = 0;
+		//		while (result != 0)
+		//		{
+		//			sum += result % 10;
+		//			result = result / 10;
+		//		}
+		//		result = sum;
+		//	}
+
+		//	return result;
+		//}
+
 	}
 }
