@@ -1650,5 +1650,19 @@ namespace Algorithm
 
 		//}
 
+		//public static int MissingNumber(int[] nums)
+		//{
+		//	Array.Sort(nums);
+		//	int temp = nums.Length;
+		//	for (int i = 0; i < nums.Length; i++)
+		//	{
+		//		if (i != nums[i])
+		//		{
+		//			temp = i;
+		//			break;
+		//		}
+		//	}
+		//	return (temp != nums.Length) ? temp : nums.Length;
+		//}
 	}
 }
