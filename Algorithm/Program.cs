@@ -1663,6 +1663,14 @@ namespace Algorithm
 		//		}
 		//	}
 		//	return (temp != nums.Length) ? temp : nums.Length;
+		
+		//long sum = 0;
+  //      for(int i = 0; i <= nums.Length; i++){
+  //          sum += i;
+  //      }
+  //      return (int) (sum-nums.Sum());
 		//}
+
+	
 	}
 }
