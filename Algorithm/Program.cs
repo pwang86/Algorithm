@@ -1716,6 +1716,13 @@ namespace Algorithm
 		//			zeroIndex++;
 		//		}
 		//	}
+
+		/*slower solution*/
+		// for(int i = 0, j = 1; i<nums.Length && j<nums.Length; ){
+		//		if(nums[i] != 0) { i++; j++; }
+		//		else if(nums[j] == 0) j++;
+		//		else nums[i] = nums[i] ^ nums[j] ^ (nums[j] = nums[i]);
+		//}
 		//}
 
 
