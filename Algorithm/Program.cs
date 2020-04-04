@@ -1701,5 +1701,23 @@ namespace Algorithm
 		//	return left;
 		//}
 
+		//public static void MoveZeroes(int[] nums)
+		//{
+		//	int zeroIndex = 0;
+		//	for (int i = 0; i < nums.Length; i++)
+		//	{
+		//		if (nums[i] != 0)
+		//		{
+		//			if (zeroIndex != i)
+		//			{
+		//				nums[zeroIndex] = nums[i];
+		//				nums[i] = 0;
+		//			}
+		//			zeroIndex++;
+		//		}
+		//	}
+		//}
+
+
 	}
 }
