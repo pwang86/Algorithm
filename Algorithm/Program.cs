@@ -1725,6 +1725,34 @@ namespace Algorithm
 		//}
 		//}
 
+		//public static bool WordPattern(string pattern, string str)
+		//{
+		//	var strArray = new string[] { "" };
+		//	strArray = str.Split(' ');
+
+		//	if (pattern.Length != strArray.Length)
+		//		return false;
+
+		//	var temp = new Dictionary<char, string>();
+
+		//	for (int i = 0; i < pattern.Length; i++)
+		//	{
+		//		if (temp.ContainsKey(pattern[i]))
+		//		{
+		//			if (temp[pattern[i]] != strArray[i])
+		//				return false;
+		//		}
+		//		else
+		//		{
+		//			if (temp.ContainsValue(strArray[i]))
+		//				return false;
+		//			else
+		//				temp.Add(pattern[i], strArray[i]);
+		//		}
+		//	}
+		//	return true;
+
+		//}
 
 	}
 }
