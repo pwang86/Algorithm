@@ -1754,5 +1754,10 @@ namespace Algorithm
 
 		//}
 
+		//public static bool CanWinNim(int n)
+		//{
+		//	return !(n % 4 == 0);
+		//}
+
 	}
 }
