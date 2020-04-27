@@ -1759,5 +1759,55 @@ namespace Algorithm
 		//	return !(n % 4 == 0);
 		//}
 
+		//public static string ToHex(int num)
+		//{
+		//	if (num == 0)
+		//		return "0";
+		//	Stack<object> stack = new Stack<object>();
+		//	StringBuilder sb = new StringBuilder();
+		//	int result = num;
+		//	while (result != 0)
+		//	{
+		//		int temp = result % 16;
+		//		char letter;
+		//		if (temp > 9)
+		//		{
+		//			switch (temp)
+		//			{
+		//				case 10:
+		//					letter = 'a';
+		//					break;
+		//				case 11:
+		//					letter = 'b';
+		//					break;
+		//				case 12:
+		//					letter = 'c';
+		//					break;
+		//				case 13:
+		//					letter = 'd';
+		//					break;
+		//				case 14:
+		//					letter = 'e';
+		//					break;
+		//				default:
+		//					letter = 'f';
+		//					break;
+
+		//			}
+		//			stack.Push(letter);
+		//		}
+		//		else
+		//			stack.Push(temp);
+		//		result /= 16;
+
+		//	}
+		//	int length = stack.Count;
+		//	for (int i = 0; i < length; i++)
+		//	{
+		//		sb.Append(stack.Pop());
+		//	}
+		//	return sb.ToString();
+		//}
+
 	}
 }
